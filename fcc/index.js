@@ -159,7 +159,7 @@ function setupBackgroundApp(app, myApp, dirname) {
 
   // (almost) safely mount the practicing app
   try {
-    app.use('/', myApp);
+    app.use('/', true, myApp);
     const stack = (myApp._router && myApp._router.stack) || [];
     const layers = stack.map((l) => l.name);
 
